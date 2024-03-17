@@ -1,0 +1,26 @@
+[package]
+name = "ada"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-openai = "^0.19"
+clap = { version = "^4.5", features = ["derive"] }
+polars = { version = "^0.38", features = [
+  "lazy",
+  "parquet",
+  "decompress",
+  "dtype-array",
+  "strings",
+  "regex",
+  "zip_with",
+  "dot_product",
+] }
+polars-arrow = "^0.38"
+itertools = "^0.12"
+tokio = { version = "^1.36", features = ["full"] }
+roxmltree = "^0.19"
+voca_rs = "^1.15"
+tiktoken-rs = "^0.5"
